@@ -167,7 +167,6 @@ while True:
 
     frame_count += 1
 
-    # 🔥 SKIP FRAMES
     if frame_count % FRAME_SKIP != 0:
         continue
 
@@ -175,10 +174,8 @@ while True:
     small_frame = cv2.resize(frame, (0, 0), fx=RESIZE_SCALE, fy=RESIZE_SCALE)
     rgb_small_frame = cv2.cvtColor(small_frame, cv2.COLOR_BGR2RGB)
 
-    # 🔥 FAST DETECTOR (CPU)
     face_locations = face_recognition.face_locations(rgb_small_frame, model="hog")
 
-    # 🔥 FAST ENCODING
     face_encodings = face_recognition.face_encodings(
         rgb_small_frame,
         face_locations,
