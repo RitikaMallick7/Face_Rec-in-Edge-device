@@ -12,4 +12,5 @@ backend/
 **/captures
 **/.venv
 
+
 frontend/.next
