@@ -12,6 +12,7 @@ from PIL import Image
 
 # Your folder dictionary
 people_images = {
+    # these are the examples 
     # "Bhagat Singh": [r"Pic\Pic\Staff\staff-1.jpg"],
     # "Prashant Deshmukh": [r"Pic\Pic\Staff\staff-2.jpg"],
     # "Nilanchal Jena": [r"Pic\Pic\Staff\staff-3.jpg"],
