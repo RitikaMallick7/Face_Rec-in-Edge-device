@@ -117,7 +117,7 @@ CAPTURE_DIR = r"captures"
 FRAME_SKIP = 3              # Process every 3rd frame (huge speed boost)
 RESIZE_SCALE = 0.20        # Reduce frame size (0.20 = faster)
 TOLERANCE = 0.55           # Matching strictness
-COOLDOWN_FRAMES = 60       # Prevent duplicate logging
+COOLDOWN_FRAMES = 70       # Prevent duplicate logging
 
 frame_count = 0
 
