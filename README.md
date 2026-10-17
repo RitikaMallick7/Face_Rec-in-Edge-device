@@ -4,7 +4,7 @@
 ![Edge Computing](https://img.shields.io/badge/Edge_Computing-Optimized-green.svg)
 ![Framework](https://img.shields.io/badge/Framework-OpenCV%20%7C%20DeepLearning-orange.svg)
 
-This repository focuses on deploying efficient face recognition models on edge devices (like Raspberry Pi, Jetson Nano, or local IoT gateways). The goal is to provide low-latency, privacy-focused facial identification without relying heavily on cloud processing.
+This repository focuses on deploying efficient face recognition models on edge devices (like Raspberry Pi, Jetson Nano, or local IoT gateways). The goal is to provide low-late, privacy-focused facial identification without relying heavily on cloud processing.
 
 ##  Features
 
