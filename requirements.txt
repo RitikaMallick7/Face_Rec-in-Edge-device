@@ -9,5 +9,6 @@ Pillow
 
 # pip install C:\Users\Admin\Downloads\dlib-19.22.99-cp310-cp310-win_amd64.whl
 
+
 streamlit
 pandas
