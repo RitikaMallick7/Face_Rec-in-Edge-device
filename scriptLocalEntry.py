@@ -116,7 +116,7 @@ CAPTURE_DIR = r"captures"
 
 FRAME_SKIP = 3              # Process every 3rd frame (huge speed boost)
 RESIZE_SCALE = 0.20        # Reduce frame size (0.20 = faster)
-TOLERANCE = 0.45           # Matching strictness
+TOLERANCE = 0.55           # Matching strictness
 COOLDOWN_FRAMES = 60       # Prevent duplicate logging
 
 frame_count = 0
@@ -184,7 +184,6 @@ while True:
 
     for (top, right, bottom, left), face_encoding in zip(face_locations, face_encodings):
 
-        # 🔥 FAST MATCHING (better than compare_faces)
         face_distances = face_recognition.face_distance(known_face_encodings, face_encoding)
         best_match_index = np.argmin(face_distances)
 
@@ -202,7 +201,6 @@ while True:
             cv2.putText(frame, name, (left, top - 10),
                         cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 0), 2)
 
-            # 🔥 COOLDOWN LOGIC
             if (frame_count - last_seen_dict.get(name, 0)) > COOLDOWN_FRAMES:
                 log_locally(frame, name)
                 last_seen_dict[name] = frame_count
