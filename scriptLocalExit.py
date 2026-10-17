@@ -114,7 +114,7 @@ import csv
 LOG_FILE = r"log.csv"
 CAPTURE_DIR = r"captures"
 
-FRAME_SKIP = 3              # Process every 3rd frame (huge speed boost)
+FRAME_SKIP = 5              # Process every 3rd frame (huge speed boost)
 RESIZE_SCALE = 0.20        # Reduce frame size (0.20 = faster)
 TOLERANCE = 0.55           # Matching strictness
 COOLDOWN_FRAMES = 70       # Prevent duplicate logging
