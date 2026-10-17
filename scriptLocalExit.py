@@ -167,7 +167,7 @@ while True:
 
     frame_count += 1
 
-    # 🔥 SKIP FRAMES
+
     if frame_count % FRAME_SKIP != 0:
         continue
 
@@ -175,10 +175,8 @@ while True:
     small_frame = cv2.resize(frame, (0, 0), fx=RESIZE_SCALE, fy=RESIZE_SCALE)
     rgb_small_frame = cv2.cvtColor(small_frame, cv2.COLOR_BGR2RGB)
 
-    # 🔥 FAST DETECTOR (CPU)
     face_locations = face_recognition.face_locations(rgb_small_frame, model="hog")
 
-    # 🔥 FAST ENCODING
     face_encodings = face_recognition.face_encodings(
         rgb_small_frame,
         face_locations,
@@ -187,7 +185,6 @@ while True:
 
     for (top, right, bottom, left), face_encoding in zip(face_locations, face_encodings):
 
-        # 🔥 FAST MATCHING (better than compare_faces)
         face_distances = face_recognition.face_distance(known_face_encodings, face_encoding)
         best_match_index = np.argmin(face_distances)
 
@@ -205,7 +202,6 @@ while True:
             cv2.putText(frame, name, (left, top - 10),
                         cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 0), 2)
 
-            # 🔥 COOLDOWN LOGIC
             if (frame_count - last_seen_dict.get(name, 0)) > COOLDOWN_FRAMES:
                 log_locally(frame, name)
                 last_seen_dict[name] = frame_count
