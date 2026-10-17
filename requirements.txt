@@ -1,0 +1,13 @@
+cmake
+face_recognition
+
+opencv-python<4.10
+numpy<2.0.0
+
+# ultralytics
+Pillow
+
+# pip install C:\Users\Admin\Downloads\dlib-19.22.99-cp310-cp310-win_amd64.whl
+
+streamlit
+pandas

@@ -1,0 +1,15 @@
+#backend
+backend/
+
+**/node_modules
+
+**/.env
+**/.env.local
+# **/script1.py
+# **/scriptLocal.py
+# **/requirements.txt
+**/Vids
+**/captures
+**/.venv
+
+frontend/.next
