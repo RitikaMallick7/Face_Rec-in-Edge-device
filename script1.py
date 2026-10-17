@@ -47,7 +47,7 @@ people_images = {
 
 known_encodings = []
 known_names = []
-
+# startng the process
 print("Starting encoding process...")
 
 for name, paths in people_images.items():
